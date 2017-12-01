@@ -11,6 +11,10 @@ dotfiles=~/dotfiles                         # dotfile directory
 old_dotfiles=~/dotfiles/dotfiles_old        # existing dotfile backup
 files=".bashrc .bashrc.local .bash_profile .vimrc .vim .dircolors"       # list of files to symlink 
 
+# Initialize git submodules
+# ========================================
+git submodule init
+git submodule update
 
 # Create backup
 # ========================================
