@@ -30,7 +30,9 @@ let mapleader=","
 " Filetype handling
 au BufRead,BufNewFile *.bteq,*.btq set filetype=sql
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.html set filetype=htmldjango
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 
 " Use pathogen to pull in vim plug-ins
@@ -39,7 +41,7 @@ execute pathogen#infect()
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrows=0  
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeShowHidden=1 
 let NERDTreeIgnore = ['\.pyc$']
 
@@ -52,6 +54,5 @@ if !exists('g:airline_symbols')
 endif
 
 " Set colorscheme
-colorscheme badwolf
-let badwolf_darkgutter = 1
+colorscheme deus
 
