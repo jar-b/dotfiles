@@ -50,6 +50,15 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let NERDTreeShowHidden=1 
 let NERDTreeIgnore = ['\.pyc$']
 
+" Open NERDTree if vim is opened without files
+" http://blogs.perl.org/users/ovid/2011/04/nerdtree-on-startup.html
+function! StartUp()
+    if 0 == argc()
+        NERDTree
+    end
+endfunction
+autocmd VimEnter * call StartUp()
+
 " Airline
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
