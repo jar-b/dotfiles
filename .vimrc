@@ -28,12 +28,17 @@ set t_Co=256 " enable 256 colors in vim
 let mapleader=","
 
 " Filetype handling
+filetype plugin on
 au BufRead,BufNewFile *.bteq,*.btq set filetype=sql
 au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.html set filetype=htmldjango
+au BufRead,BufNewFile Jenkinsfile set filetype=groovy
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType groovy setlocal shiftwidth=2 tabstop=2
+autocmd FileType go setlocal shiftwidth=8 tabstop=8
+autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 
 " Use pathogen to pull in vim plug-ins
 execute pathogen#infect()
