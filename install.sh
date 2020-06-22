@@ -9,7 +9,7 @@
 # ========================================
 dotfiles=~/dotfiles                         # dotfile directory
 old_dotfiles=~/dotfiles/dotfiles_old        # existing dotfile backup
-files=".bashrc .bashrc.local .bash_profile .vimrc .vim .tmux.conf .dircolors"       # list of files to symlink
+files=".bashrc .bashrc.local .bash_profile .vimrc .vim .tmux.conf .dircolors .inputrc .config"       # list of files to symlink
 
 
 # Initialize git submodules
