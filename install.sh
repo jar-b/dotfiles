@@ -12,12 +12,6 @@ old_dotfiles=~/dotfiles/dotfiles_old        # existing dotfile backup
 files=".bashrc .bashrc.local .bash_profile .vimrc .vim .tmux.conf .dircolors .inputrc .config"       # list of files to symlink
 
 
-# Initialize git submodules
-# ========================================
-git submodule init
-git submodule update
-
-
 # Create backup
 # ========================================
 echo -e "Creating a backup directory for existing dotfiles:\n\t--> $old_dotfiles\n"
@@ -31,7 +25,7 @@ for file in $files; do
     if [ -f ~/$file ] || [ -d ~/$file ]; then
         if [ -h ~/$file ]; then
             echo -e "\tBackup: Existing file is a link, no backup created"
-        else 
+        else
             echo -e "\tBackup: --> $old_dotfiles/$file"
             mv ~/$file $old_dotfiles
         fi
@@ -42,7 +36,7 @@ for file in $files; do
     # symlink
     if [ "$(readlink ~/$file)" = "$dotfiles/$file" ]; then
         echo -e "\tSymlink: --> Already linked to dofiles!"
-    else 
+    else
         echo -e "\tSymlink: --> ~/$file"
         ln -s $dotfiles/$file ~/$file
     fi
