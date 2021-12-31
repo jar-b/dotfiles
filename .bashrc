@@ -39,6 +39,7 @@ alias la='ls -la'
 alias ll='ls -alFh --group-directories-first'
 alias vimr='vim -R'
 alias gs='git status'
+alias gl='git log --graph --oneline'
 alias tmux='tmux -2'
 
 
