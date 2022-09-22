@@ -2,3 +2,4 @@ dotfiles_old/
 .vim/.netrwhist
 .vim/plugged
 .config/
+Brewfile.lock.json

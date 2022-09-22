@@ -11,6 +11,11 @@ dotfiles=~/dotfiles                         # dotfile directory
 old_dotfiles=~/dotfiles/dotfiles_old        # existing dotfile backup
 files=".bashrc .bashrc.local .bash_profile .vimrc .vim .tmux.conf .dircolors .inputrc .config"       # list of files to symlink
 
+OS=$(uname -s)
+if [[ $OS == "Darwin" ]]; then
+    # if MacOS, append Brewfile
+    files="$files Brewfile"
+fi
 
 # Create backup
 # ========================================
