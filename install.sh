@@ -14,6 +14,7 @@ files=".bashrc .bashrc.local .bash_profile .vimrc .vim .tmux.conf .dircolors .in
 OS=$(uname -s)
 if [[ $OS == "Darwin" ]]; then
     # if MacOS, append Brewfile
+    # NOTE: set HOMEBREW_BUNDLE_FILE=$HOME/Brewfile for use from any directory
     files="$files Brewfile"
 fi
 
