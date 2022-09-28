@@ -41,6 +41,7 @@ alias vimr='vim -R'
 alias gs='git status'
 alias gl='git log --graph --oneline'
 alias tmux='tmux -2'
+alias hs='history | grep --color=auto'
 
 
 # Source .bashrc.local
