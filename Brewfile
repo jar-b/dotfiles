@@ -1,5 +1,6 @@
 brew 'awscli'
 brew 'bash-completion'
+brew 'bat'
 brew 'coreutils'
 brew 'gh'
 brew 'git'
