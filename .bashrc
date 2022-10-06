@@ -5,6 +5,11 @@
 # ========================================
 PATH=$PATH:.
 export EDITOR=vi
+# history settings
+shopt -s histappend
+export HISTSIZE=5000
+export HISTFILESIZE=10000
+export HISTCONTROL=ignoreboth:erasedups
 
 
 # Terminal color
