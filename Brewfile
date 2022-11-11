@@ -27,3 +27,4 @@ brew 'vim'
 brew 'yamllint'
 
 cask 'rectangle'
+cask 'alt-tab'
