@@ -24,6 +24,7 @@ brew 'tmux'
 brew 'tree'
 brew 'vault'
 brew 'vim'
+brew 'xsv'
 brew 'yamllint'
 
 cask 'rectangle'
