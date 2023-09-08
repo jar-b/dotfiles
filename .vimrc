@@ -93,7 +93,6 @@ endif
 
 " CTRLp
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlPMRU'
 
 " vim-go
 " Sourced from: https://github.com/fatih/vim-go-tutorial/blob/master/vimrc
