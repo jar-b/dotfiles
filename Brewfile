@@ -29,3 +29,6 @@ brew 'yamllint'
 
 cask 'rectangle'
 cask 'alt-tab'
+
+tap 'hashicorp/tap'
+brew 'hashicorp/tap/terraform-ls'
