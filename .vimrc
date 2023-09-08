@@ -15,6 +15,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " language-specific
 Plug 'fatih/vim-go'
+Plug 'buoto/gotests-vim', {'commit': '9adb78b15d0cbb72a3ffb9fbed28faa909b0817b'} " Ref: https://github.com/buoto/gotests-vim/issues/9
 Plug 'hashivim/vim-terraform'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
