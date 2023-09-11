@@ -75,6 +75,7 @@ autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
+map <leader>f :NERDTreeFind<CR>
 let g:NERDTreeDirArrows=0
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeShowHidden=1
