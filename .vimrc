@@ -25,6 +25,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'wfxr/minimap.vim'
 
 " always need to be last
 Plug 'ryanoasis/vim-devicons'
@@ -94,6 +95,10 @@ endif
 
 " CTRLp
 let g:ctrlp_map = '<c-p>'
+
+" Minimap
+let g:minimap_auto_start = 1
+let g:minimap_auto_start_win_enter = 1
 
 " vim-go
 " Sourced from: https://github.com/fatih/vim-go-tutorial/blob/master/vimrc
