@@ -1,6 +1,7 @@
 brew 'awscli'
 brew 'bash-completion'
 brew 'bat'
+brew 'code-minimap'
 brew 'coreutils'
 brew 'fd'
 brew 'gh'
