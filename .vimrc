@@ -99,6 +99,7 @@ let g:ctrlp_map = '<c-p>'
 " Minimap
 let g:minimap_auto_start = 1
 let g:minimap_auto_start_win_enter = 1
+let g:minimap_git_colors = 1
 
 " vim-go
 " Sourced from: https://github.com/fatih/vim-go-tutorial/blob/master/vimrc
