@@ -45,6 +45,8 @@ alias ll='ls -alFh --group-directories-first'
 alias vimr='vim -R'
 alias gs='git status'
 alias gl='git log --graph --oneline'
+alias gco='git checkout'
+alias gcob='git checkout -b'
 alias tmux='tmux -2'
 alias hs='history | grep -i --color=auto'
 
