@@ -31,6 +31,10 @@ Plug 'wfxr/minimap.vim'
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
+" Set colorscheme
+colorscheme codedark
+let g:airline_theme = 'codedark'
+
 inoremap jk <esc>
 nnoremap ; :
 vnoremap ; :
@@ -84,6 +88,16 @@ let NERDTreeIgnore = ['\.pyc$']
 let s:blue = "689FB6"
 let g:NERDTreeExtensionHighlightColor = {} " this line is needed to avoid error
 let g:NERDTreeExtensionHighlightColor['go'] = s:blue " sets the color of go files to blue
+
+" Open NERDTree if vim is opened without files
+" http://blogs.perl.org/users/ovid/2011/04/nerdtree-on-startup.html
+function! StartUp()
+    if 0 == argc()
+        NERDTree
+    end
+endfunction
+
+autocmd VimEnter * call StartUp()
 
 " Airline
 let g:airline#extensions#tabline#enabled=1
@@ -201,10 +215,6 @@ endif
 
 inoremap <expr> <CR> coc#pum#visible() ? coc#_select_confirm() : "\<CR>"
 
-" Set colorscheme
-colorscheme codedark
-let g:airline_theme = 'codedark'
-
 " Adding this which is normally included in /etc/vim/vimrc on
 " ubuntu, but for some reason is missing from the global vimrc
 " on Mac OSX
@@ -218,13 +228,3 @@ endif
 " set backspace defaults (required when using a brew installed version of vim
 " that doesn't use global defaults)
 set backspace=indent,eol,start
-
-" Open NERDTree if vim is opened without files
-" http://blogs.perl.org/users/ovid/2011/04/nerdtree-on-startup.html
-function! StartUp()
-    if 0 == argc()
-        NERDTree
-    end
-endfunction
-
-autocmd VimEnter * call StartUp()
