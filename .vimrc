@@ -1,10 +1,14 @@
 " vim-plug for plugin management
 call plug#begin()
 " themes
-"Plug 'ajmwagar/vim-deus'
-"Plug 'sjl/badwolf'
-"Plug 'mhinz/vim-janah'
+Plug 'ajmwagar/vim-deus'
+Plug 'sjl/badwolf'
+Plug 'mhinz/vim-janah'
 Plug 'tomasiser/vim-code-dark'
+Plug 'ayu-theme/ayu-vim'
+Plug 'nordtheme/vim'
+
+" airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -32,8 +36,9 @@ Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " Set colorscheme
-colorscheme codedark
-let g:airline_theme = 'codedark'
+set termguicolors
+colorscheme nord
+let g:airline_theme = 'nord'
 
 inoremap jk <esc>
 nnoremap ; :
