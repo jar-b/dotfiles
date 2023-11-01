@@ -38,6 +38,7 @@ unset color_prompt
 
 # Aliases
 # ========================================
+alias cw='gh pr checks --watch'
 alias fv='vim $(fzf)'
 alias gc='git commit -S -m'
 alias gco='git checkout'
