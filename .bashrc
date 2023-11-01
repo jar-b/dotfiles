@@ -38,11 +38,7 @@ unset color_prompt
 
 # Aliases
 # ========================================
-alias p='ps -ef|grep "$(whoami)"| sort -n'
-alias ls='ls --color=auto'
-alias la='ls -la'
-alias ll='ls -alFh --group-directories-first'
-alias vimr='vim -R'
+alias fv='vim $(fzf)'
 alias gc='git commit -S -m'
 alias gco='git checkout'
 alias gcob='git checkout -b'
@@ -50,8 +46,13 @@ alias gd='git diff'
 alias gl='git log --graph --oneline'
 alias gp='git pull -p'
 alias gs='git status'
-alias tmux='tmux -2'
 alias hs='history | grep -i --color=auto'
+alias la='ls -la'
+alias ll='ls -alFh --group-directories-first'
+alias ls='ls --color=auto'
+alias p='ps -ef|grep "$(whoami)"| sort -n'
+alias tmux='tmux -2'
+alias vimr='vim -R'
 
 
 # Source .bashrc.local
