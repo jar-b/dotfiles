@@ -17,6 +17,7 @@ alias la='ls -la'
 alias ll='ls -alFh --group-directories-first'
 alias ls='ls --color=auto'
 alias p='ps -ef|grep "$(whoami)"| sort -n'
+alias tfmt='terraform fmt -write'
 alias tmux='tmux -2'
 alias vimr='vim -R'
 
