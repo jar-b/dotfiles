@@ -162,6 +162,8 @@ require('lazy').setup({
   -- Comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
 
+  -- Display pending keybinds
+  { 'folke/which-key.nvim',  opts = {} },
 
   -- Fuzzy Finder (files, lsp, etc)
   {
