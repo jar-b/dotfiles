@@ -32,6 +32,7 @@ require('lazy').setup({
   -- Plugins with no configuration
   'christoomey/vim-tmux-navigator',
   'tpope/vim-fugitive',
+  'tpope/vim-sleuth',
 
   -- LSP Configuration & Plugins
   {
@@ -74,7 +75,7 @@ require('lazy').setup({
     -- See `:help lualine.txt`
     opts = {
       options = {
-        icons_enabled = false,
+        icons_enabled = true,
         theme = 'nord',
         component_separators = '|',
         section_separators = '',
@@ -82,15 +83,16 @@ require('lazy').setup({
     },
   },
 
+  -- Comment visual regions/lines
+  { 'numToStr/Comment.nvim', opts = {} },
+
+
   -- Fuzzy Finder (files, lsp, etc)
   {
     'nvim-telescope/telescope.nvim',
     branch = '0.1.x',
     dependencies = { 'nvim-lua/plenary.nvim' },
   },
-
-  -- Comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
 
   -- Highlight, edit, and navigate code
   {
@@ -190,7 +192,7 @@ require 'nvim-treesitter.configs'.setup {
   modules = {},
 }
 
--- [[ Configure LSP ]]
+-- LSP Configuration
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
   local nmap = function(keys, func, desc)
