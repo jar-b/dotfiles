@@ -48,6 +48,9 @@ require('lazy').setup({
 
       -- Additional lua configuration, makes nvim stuff amazing!
       'folke/neodev.nvim',
+
+      -- Format on save
+      'lukas-reineke/lsp-format.nvim',
     },
   },
 
@@ -283,7 +286,7 @@ require 'nvim-treesitter.configs'.setup {
 
 -- LSP Configuration
 --  This function gets run when an LSP connects to a particular buffer.
-local on_attach = function(_, bufnr)
+local on_attach = function(client, bufnr)
   local nmap = function(keys, func, desc)
     if desc then
       desc = 'LSP: ' .. desc
@@ -318,6 +321,9 @@ local on_attach = function(_, bufnr)
   vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
     vim.lsp.buf.format()
   end, { desc = 'Format current buffer with LSP' })
+
+  -- Format on save
+  require("lsp-format").on_attach(client, bufnr)
 end
 
 -- document existing key chains
