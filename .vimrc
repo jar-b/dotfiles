@@ -16,6 +16,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'tpope/vim-vinegar'
 
 " language-specific
 Plug 'fatih/vim-go'
