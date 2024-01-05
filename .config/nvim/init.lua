@@ -165,11 +165,14 @@ require('lazy').setup({
     },
   },
 
+  -- Bufferline
+  { 'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons', opts = {} },
+
   -- Comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
+  { 'numToStr/Comment.nvim',   opts = {} },
 
   -- Display pending keybinds
-  { 'folke/which-key.nvim',  opts = {} },
+  { 'folke/which-key.nvim',    opts = {} },
 
   -- Fuzzy Finder (files, lsp, etc)
   {
