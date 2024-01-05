@@ -34,6 +34,7 @@ require('lazy').setup({
   'tpope/vim-fugitive',
   'tpope/vim-sleuth',
   'tpope/vim-vinegar',
+  'farmergreg/vim-lastplace',
 
   -- LSP Configuration & Plugins
   {
