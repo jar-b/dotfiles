@@ -33,6 +33,7 @@ require('lazy').setup({
   'christoomey/vim-tmux-navigator',
   'tpope/vim-fugitive',
   'tpope/vim-sleuth',
+  'tpope/vim-vinegar',
 
   -- LSP Configuration & Plugins
   {
