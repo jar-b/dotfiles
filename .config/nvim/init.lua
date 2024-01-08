@@ -215,6 +215,12 @@ vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
 
+vim.opt.list = true
+vim.opt.listchars:append {
+  eol = "↲",
+  trail = "·"
+}
+
 -- Remaps
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set("i", "jk", "<Esc>")
