@@ -23,7 +23,7 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   -- Theme
   {
-    'nordtheme/vim',
+    'gbprod/nord.nvim',
     config = function()
       vim.cmd.colorscheme 'nord'
     end,
