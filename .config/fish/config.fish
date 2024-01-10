@@ -22,10 +22,6 @@ alias tfmt='terraform fmt -write'
 alias tmux='tmux -2'
 alias vimr='vim -R'
 
-# Theme
-# ========================================
-set -g theme_color_scheme nord
-
 # Key Bindings
 # ========================================
 set fish_key_bindings fish_user_key_bindings
