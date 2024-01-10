@@ -21,11 +21,11 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Configure plugins
 require('lazy').setup({
-  -- Theme
   {
-    'gbprod/nord.nvim',
+    'rose-pine/neovim',
+    name = 'rose-pine',
     config = function()
-      vim.cmd.colorscheme 'nord'
+      vim.cmd.colorscheme 'rose-pine'
     end,
   },
 
@@ -158,7 +158,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = true,
-        theme = 'nord',
+        theme = 'rose-pine',
         component_separators = '|',
         section_separators = '',
       },
