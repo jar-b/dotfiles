@@ -228,7 +228,8 @@ vim.opt.timeoutlen = 300
 vim.opt.list = true
 vim.opt.listchars:append {
   eol = "↲",
-  trail = "·"
+  tab = '» ',
+  trail = "·",
 }
 
 -- Remaps
