@@ -29,7 +29,7 @@ set fish_key_bindings fish_user_key_bindings
 # Home
 # ========================================
 set --append PATH "$HOME/bin"
-set -gx EDITOR vim
+set -gx EDITOR nvim
 
 # Go
 # ========================================
