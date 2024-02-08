@@ -33,3 +33,7 @@ cask 'alt-tab'
 
 tap 'hashicorp/tap'
 brew 'hashicorp/tap/terraform-ls'
+
+tap 'homebrew/cask-fonts'
+cask 'font-ubuntu-mono-nerd-font'
+cask 'font-jetbrains-mono-nerd-font'
