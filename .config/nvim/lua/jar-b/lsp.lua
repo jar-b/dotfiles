@@ -67,6 +67,7 @@ require('mason-lspconfig').setup()
 local servers = {
   gopls = {},
   terraformls = {},
+  marksman = {},
 
   lua_ls = {
     Lua = {
