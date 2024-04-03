@@ -174,8 +174,9 @@ require('lazy').setup({
   -- Display pending keybinds
   { 'folke/which-key.nvim',    opts = {} },
 
-  -- ZenMode
+  -- ZenMode, Twilight
   { "folke/zen-mode.nvim",     opts = {} },
+  { "folke/twilight.nvim",     opts = {} },
 
   -- Fuzzy Finder (files, lsp, etc)
   {
