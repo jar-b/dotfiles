@@ -178,6 +178,15 @@ require('lazy').setup({
   { "folke/zen-mode.nvim",     opts = {} },
   { "folke/twilight.nvim",     opts = {} },
 
+  -- gotests
+  {
+    "yanskun/gotests.nvim",
+    ft = "go",
+    config = function()
+      require("gotests").setup()
+    end,
+  },
+
   -- Fuzzy Finder (files, lsp, etc)
   {
     'nvim-telescope/telescope.nvim',
