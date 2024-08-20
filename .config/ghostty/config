@@ -1,0 +1,15 @@
+# vi:ft=conf
+#
+# https://github.com/ghostty-org/ghostty/blob/main/src/config/Config.zig
+
+clipboard-read = allow
+
+cursor-style = block
+cursor-style-blink = true
+
+font-family = JetBrainsMono Nerd Font Mono
+font-size = 13
+
+shell-integration-features = no-cursor
+
+theme = rose-pine
