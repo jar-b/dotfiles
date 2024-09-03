@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="1.19.3"
+VERSION="1.23.0"
 OS="linux"
 ARCH="amd64"
 
