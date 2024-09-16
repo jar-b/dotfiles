@@ -4,11 +4,15 @@
 
 clipboard-read = allow
 
+copy-on-select = clipboard
+
 cursor-style = block
 cursor-style-blink = true
 
 font-family = JetBrainsMono Nerd Font Mono
 font-size = 13
+
+selection-invert-fg-bg = true
 
 shell-integration-features = no-cursor
 
