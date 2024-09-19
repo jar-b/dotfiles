@@ -16,4 +16,4 @@ selection-invert-fg-bg = true
 
 shell-integration-features = no-cursor
 
-theme = rose-pine
+theme = dracula
