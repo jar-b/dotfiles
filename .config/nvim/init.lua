@@ -17,10 +17,10 @@ vim.opt.rtp:prepend(lazypath)
 -- Configure plugins
 require('lazy').setup({
   {
-    'rose-pine/neovim',
-    name = 'rose-pine',
+    'Mofiqul/dracula.nvim',
+    name = 'dracula',
     config = function()
-      vim.cmd.colorscheme 'rose-pine'
+      vim.cmd.colorscheme 'dracula'
     end,
   },
 
@@ -150,7 +150,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = true,
-        theme = 'rose-pine',
+        theme = 'dracula',
         component_separators = '|',
         section_separators = '',
       },
