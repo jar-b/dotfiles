@@ -42,15 +42,15 @@ end
 
 -- document existing key chains
 require('which-key').add {
-  { "<leader>c",  group = "[C]ode" },
-  { "<leader>d",  group = "[D]ocument" },
-  { "<leader>g",  group = "[G]it" },
-  { "<leader>h",  group = "Git [H]unk",      mode = { 'n', 'v' } },
-  { "<leader>r",  group = "[R]ename" },
-  { "<leader>s",  group = "[S]earch" },
-  { "<leader>t",  group = "[T]oggle" },
-  { "<leader>w",  group = "[W]orkspace" },
-  { "<leader>",   group = "VISUAL <leader>", mode = "v" },
+  { "<leader>c", group = "[C]ode" },
+  { "<leader>d", group = "[D]ocument" },
+  { "<leader>g", group = "[G]it" },
+  { "<leader>h", group = "Git [H]unk",      mode = { 'n', 'v' } },
+  { "<leader>r", group = "[R]ename" },
+  { "<leader>s", group = "[S]earch" },
+  { "<leader>t", group = "[T]oggle" },
+  { "<leader>w", group = "[W]orkspace" },
+  { "<leader>",  group = "VISUAL <leader>", mode = "v" },
 }
 
 -- mason-lspconfig requires that these setup functions are called in this order
@@ -63,6 +63,8 @@ local servers = {
   gopls = {},
   terraformls = {},
   marksman = {},
+  yamllint = {},
+  zls = {},
 
   lua_ls = {
     Lua = {
