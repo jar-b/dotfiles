@@ -63,7 +63,6 @@ local servers = {
   gopls = {},
   terraformls = {},
   marksman = {},
-  yamllint = {},
   zls = {},
 
   lua_ls = {
