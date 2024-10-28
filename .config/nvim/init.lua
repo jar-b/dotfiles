@@ -206,6 +206,10 @@ require('lazy').setup({
   },
 }, {})
 
+-- Load custom snippets
+-- Ref: https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md
+require("luasnip.loaders.from_lua").load({ paths = { "./snippets" } })
+
 -- Options
 require("jar-b.options")
 
