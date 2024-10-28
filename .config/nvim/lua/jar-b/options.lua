@@ -1,6 +1,8 @@
 -- Options
 vim.opt.termguicolors = true
 
+vim.opt.cursorline = true
+
 vim.opt.clipboard = "unnamedplus"
 
 vim.opt.nu = true
