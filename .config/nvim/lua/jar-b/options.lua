@@ -32,3 +32,9 @@ vim.opt.listchars:append {
     tab = '» ',
     trail = "·",
 }
+
+vim.filetype.add({
+    extension = {
+        gtpl = 'gotmpl',
+    },
+})
