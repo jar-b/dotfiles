@@ -36,5 +36,6 @@ vim.opt.listchars:append {
 vim.filetype.add({
     extension = {
         gtpl = 'gotmpl',
+        hcl = 'terraform',
     },
 })
