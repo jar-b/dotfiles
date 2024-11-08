@@ -25,6 +25,9 @@ local on_attach = function(client, bufnr)
 
   -- Lesser used LSP functionality
   nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+  nmap('<leader>th', function()
+    vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+  end, '[T]oggle Inlay [H]ints')
   nmap('<leader>wa', vim.lsp.buf.add_workspace_folder, '[W]orkspace [A]dd Folder')
   nmap('<leader>wr', vim.lsp.buf.remove_workspace_folder, '[W]orkspace [R]emove Folder')
   nmap('<leader>wl', function()
@@ -60,7 +63,15 @@ require('mason-lspconfig').setup()
 
 -- Enable language servers
 local servers = {
-  gopls = {},
+  gopls = {
+    gopls = {
+      usePlaceholders = true,
+      hints = {
+        compositeLiteralFields = true,
+        parameterNames = true,
+      },
+    },
+  },
   terraformls = {},
   marksman = {},
   zls = {},
