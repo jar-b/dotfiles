@@ -75,6 +75,7 @@ local servers = {
   terraformls = {},
   marksman = {},
   zls = {},
+  cssls = {},
 
   lua_ls = {
     Lua = {
