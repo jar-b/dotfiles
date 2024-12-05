@@ -4,6 +4,7 @@ end
 
 # Aliases
 # ========================================
+alias awscost='aws ce get-cost-and-usage --time-period Start=$(date +%Y-%m-01),End=$(date +%Y-%m-01 -d "+1 month") --granularity MONTHLY --metrics NetUnblendedCost'
 alias cw='gh pr checks --watch'
 alias fv='nvim $(fzf)'
 alias gc='git commit -S -m'
