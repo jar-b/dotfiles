@@ -63,15 +63,7 @@ require('mason-lspconfig').setup()
 
 -- Enable language servers
 local servers = {
-  gopls = {
-    gopls = {
-      usePlaceholders = true,
-      hints = {
-        compositeLiteralFields = true,
-        parameterNames = true,
-      },
-    },
-  },
+  gopls = {},
   terraformls = {},
   marksman = {},
   zls = {},
