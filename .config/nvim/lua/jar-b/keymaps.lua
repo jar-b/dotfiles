@@ -4,7 +4,6 @@ vim.keymap.set("i", "jk", "<Esc>")
 
 vim.keymap.set({ "n", "v" }, ";", ":")
 
-vim.keymap.set("n", "<CR>", "G")
 -- Re-center on PgUp/Down
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
