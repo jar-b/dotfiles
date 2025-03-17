@@ -69,6 +69,24 @@ require('lazy').setup({
     },
   },
 
+  -- Copilot
+  {
+    "zbirenbaum/copilot.lua",
+    config = function()
+      require("copilot").setup({
+        -- disable suggestions and panel modules to avoid interference with nvim-cmp
+        suggestion = { enabled = false },
+        panel = { enabled = false },
+      })
+    end
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    config = function()
+      require("copilot_cmp").setup()
+    end
+  },
+
   -- Gitsigns
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
