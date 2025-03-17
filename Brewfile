@@ -28,8 +28,9 @@ brew 'vim'
 brew 'xsv'
 brew 'yamllint'
 
-cask 'rectangle'
 cask 'alt-tab'
+cask 'ghostty'
+cask 'rectangle'
 
 tap 'hashicorp/tap'
 brew 'hashicorp/tap/terraform-ls'
