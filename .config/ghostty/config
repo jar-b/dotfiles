@@ -18,8 +18,9 @@ shell-integration-features = no-cursor
 
 theme = dracula
 
-# When using tmux on MacOS the titlebar will always display "tmux a"
-# (or whatever command was used to enter the session). Override the default
-# style with a generic title so things look cleaner.
-title =  👻 Ghostty
-macos-titlebar-style = tabs
+# Keybinds
+keybind = ctrl+minus=new_split:down
+keybind = ctrl+j=goto_split:down
+keybind = ctrl+k=goto_split:up
+keybind = cmd+shift+up=resize_split:up,60
+keybind = cmd+shift+down=resize_split:down,60
