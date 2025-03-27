@@ -22,5 +22,6 @@ theme = dracula
 keybind = ctrl+minus=new_split:down
 keybind = ctrl+j=goto_split:down
 keybind = ctrl+k=goto_split:up
-keybind = cmd+shift+up=resize_split:up,60
-keybind = cmd+shift+down=resize_split:down,60
+keybind = ctrl+equal=equalize_splits
+keybind = cmd+shift+up=resize_split:up,100
+keybind = cmd+shift+down=resize_split:down,100
