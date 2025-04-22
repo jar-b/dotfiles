@@ -9,9 +9,9 @@ local i = ls.insert_node
 return {
   s(
     {
-      trig = "plancheck",
-      name = "Config Plan Check",
-      desc = "Insert a ConfigPlanCheck block for Terraform provider acceptance testing",
+      trig = "era",
+      name = "ExpectResourceAction Plan Check",
+      desc = "Insert an ExpectResourceAction Config Plan Check for Terraform provider acceptance testing",
     },
     {
       t({
@@ -30,7 +30,29 @@ return {
 
   s(
     {
-      trig = "impstateid",
+      trig = "extpr",
+      name = "ExternalProviders AWS",
+      desc = "Insert an ExternalProviders TestStep field for Terraform provider acceptance testing",
+    },
+    {
+      t({
+        "ExternalProviders: map[string]resource.ExternalProvider{",
+        "\t\"aws\": {",
+        "\t\tSource:            \"hashicorp/aws\",",
+        "\t\tVersionConstraint: \"5.",
+      }),
+      i(1),
+      t({
+        "\",",
+        "\t},",
+        "},",
+      }),
+    }
+  ),
+
+  s(
+    {
+      trig = "imst",
       name = "Import State ID Func (Multi-Part Key)",
       desc = "Insert an ImportStateIdFunc for a resource with a multi-part key",
     },
