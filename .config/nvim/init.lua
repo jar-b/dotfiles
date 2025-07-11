@@ -86,6 +86,18 @@ require('lazy').setup({
       require("copilot_cmp").setup()
     end
   },
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    dependencies = {
+      -- { "github/copilot.vim" },
+      { "zbirenbaum/copilot.lua" },
+      { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
+    },
+    build = "make tiktoken",                          -- Only on MacOS or Linux
+    opts = {
+      model = "claude-3.5-sonnet",
+    },
+  },
 
   -- Gitsigns
   {
