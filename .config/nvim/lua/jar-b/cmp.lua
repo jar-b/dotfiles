@@ -46,7 +46,6 @@ cmp.setup {
     { name = 'luasnip',  priority = 100 },
     { name = 'nvim_lsp', priority = 50 },
     { name = 'buffer',   priority = 50 },
-    { name = 'copilot',  priority = 50 },
     { name = 'path',     priority = 25 },
   },
 }

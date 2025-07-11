@@ -69,36 +69,6 @@ require('lazy').setup({
     },
   },
 
-  -- Copilot
-  {
-    "zbirenbaum/copilot.lua",
-    config = function()
-      require("copilot").setup({
-        -- disable suggestions and panel modules to avoid interference with nvim-cmp
-        suggestion = { enabled = false },
-        panel = { enabled = false },
-      })
-    end
-  },
-  {
-    "zbirenbaum/copilot-cmp",
-    config = function()
-      require("copilot_cmp").setup()
-    end
-  },
-  {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    dependencies = {
-      -- { "github/copilot.vim" },
-      { "zbirenbaum/copilot.lua" },
-      { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
-    },
-    build = "make tiktoken",                          -- Only on MacOS or Linux
-    opts = {
-      model = "claude-3.5-sonnet",
-    },
-  },
-
   -- Gitsigns
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
