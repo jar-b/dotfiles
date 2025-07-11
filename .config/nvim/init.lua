@@ -35,16 +35,17 @@ require('lazy').setup({
   {
     'neovim/nvim-lspconfig',
     dependencies = {
-      -- Automatically install LSPs to stdpath for neovim
-      { 'williamboman/mason.nvim', config = true },
-      'williamboman/mason-lspconfig.nvim',
+      -- Automatically install LSPs and related tools to stdpath for Neovim
+      -- Mason must be loaded before its dependents so we need to set it up here.
+      { 'mason-org/mason.nvim', opts = {} },
+      'mason-org/mason-lspconfig.nvim',
+      'WhoIsSethDaniel/mason-tool-installer.nvim',
 
       -- Useful status updates for LSP
-      -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { 'j-hui/fidget.nvim',       opts = {} },
+      { 'j-hui/fidget.nvim',    opts = {} },
 
-      -- Additional lua configuration, makes nvim stuff amazing!
-      'folke/neodev.nvim',
+      -- Allows extra capabilities provided by blink.cmp
+      'saghen/blink.cmp',
 
       -- Format on save
       'lukas-reineke/lsp-format.nvim',
@@ -164,7 +165,32 @@ require('lazy').setup({
   { 'numToStr/Comment.nvim',   opts = {} },
 
   -- Display pending keybinds
-  { 'folke/which-key.nvim',    opts = {} },
+  {
+    'folke/which-key.nvim',
+    event = 'VimEnter', -- Sets the loading event to 'VimEnter'
+    opts = {
+      -- delay between pressing a key and opening which-key (milliseconds)
+      -- this setting is independent of vim.o.timeoutlen
+      delay = 0,
+      icons = {
+        -- set icon mappings to true if you have a Nerd Font
+        mappings = vim.g.have_nerd_font,
+      },
+
+      -- Document existing key chains
+      spec = {
+        { "<leader>c", group = "[C]ode" },
+        { "<leader>d", group = "[D]ocument" },
+        { "<leader>g", group = "[G]it" },
+        { "<leader>h", group = "Git [H]unk",      mode = { 'n', 'v' } },
+        { "<leader>r", group = "[R]ename" },
+        { "<leader>s", group = "[S]earch" },
+        { "<leader>t", group = "[T]oggle" },
+        { "<leader>w", group = "[W]orkspace" },
+        { "<leader>",  group = "VISUAL <leader>", mode = "v" },
+      },
+    },
+  },
 
   -- ZenMode, Twilight
   { "folke/zen-mode.nvim",     opts = {} },
@@ -192,6 +218,10 @@ require('lazy').setup({
           return vim.fn.executable 'make' == 1
         end,
       },
+      { 'nvim-telescope/telescope-ui-select.nvim' },
+
+      -- Useful for getting pretty icons, but requires a Nerd Font.
+      { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
     },
   },
 
