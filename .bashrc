@@ -41,6 +41,7 @@ unset color_prompt
 alias cw='gh pr checks --watch'
 alias fv='nvim $(fzf)'
 alias gc='git commit -S -m'
+alias gca='git commit --amend'
 alias gco='git checkout'
 alias gcob='git checkout -b'
 alias gd='git diff'
