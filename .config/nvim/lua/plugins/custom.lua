@@ -11,10 +11,11 @@ return {
         gopls = {
           settings = {
             gopls = {
-              gofumpt = false,
               -- Set back to gopls default
               -- https://tip.golang.org/gopls/settings#directoryfilters-string
               directoryFilters = { "-**/node_modules" },
+              -- semanticTokens cause gopls to hog memory in large projects (terraform-provider-aws)
+              semanticTokens = false,
             },
           },
         },
@@ -43,6 +44,16 @@ return {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "dracula",
+    },
+  },
+  -- UI
+  {
+    "folke/snacks.nvim",
+    opts = {
+      -- disable word highlighting
+      words = {
+        enabled = false,
+      },
     },
   },
 }
