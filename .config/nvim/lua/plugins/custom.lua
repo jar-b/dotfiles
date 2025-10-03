@@ -45,6 +45,14 @@ return {
     },
   },
 
+  -- Snippets
+  {
+    "L3MON4D3/LuaSnip",
+    config = function()
+      require("luasnip.loaders.from_lua").load({ paths = { "./snippets" } })
+    end,
+  },
+
   -- Plugin Keymaps
   {
     "nvim-telescope/telescope.nvim",
@@ -74,5 +82,5 @@ return {
       words = { enabled = false },
     },
   },
-  -- { "folke/noice.nvim", enabled = false },
+  { "nvim-mini/mini.pairs", enabled = false },
 }
