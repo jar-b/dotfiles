@@ -16,7 +16,7 @@ selection-invert-fg-bg = true
 
 shell-integration-features = no-cursor
 
-theme = dracula
+theme = Dracula
 
 # Keybinds
 keybind = ctrl+minus=new_split:down
