@@ -1,0 +1,10 @@
+theme = "sonokai"
+
+[keys.normal]
+";" = "command_mode"
+
+[keys.insert.j]
+k = "normal_mode"
+
+[editor]
+mouse = false
