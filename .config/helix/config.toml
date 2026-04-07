@@ -7,4 +7,7 @@ theme = "sonokai"
 k = "normal_mode"
 
 [editor]
+bufferline = "always"
+cursorline = true
+popup-border = "all"
 mouse = false
