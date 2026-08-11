@@ -4,14 +4,15 @@
 
 vim.opt.list = true
 vim.opt.listchars:append({
-  eol = "↲",
-  tab = "» ",
-  trail = "·",
+	eol = "↲",
+	tab = "» ",
+	trail = "·",
 })
 
 vim.filetype.add({
-  extension = {
-    gtpl = "gotmpl",
-    hcl = "terraform",
-  },
+	extension = {
+		gtpl = "gotmpl",
+		tf = "terraform",
+		hcl = "terraform",
+	},
 })
