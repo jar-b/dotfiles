@@ -16,3 +16,8 @@ format = "[⟪$hostname⟫]($style) in "
 success_symbol = "[➜](bold green) "
 error_symbol = "[➜](bold red) "
 vicmd_symbol = "[](bold yellow) "
+
+[env_var.VCR_MODE]
+format = "[$symbol$env_value]($style) "
+symbol = "📼 "
+style = "bright-green bold"
